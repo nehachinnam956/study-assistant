@@ -94,10 +94,6 @@ how the renderer registry maps block types to components. I chose the study
 assistant, the block structure, and the failure-handling approach, and reviewed
 the code as it came together.
 
-> Replace this paragraph with your own honest account of what you used AI for
-> before you submit — the brief rewards honesty here, and you'll be asked about
-> the code live.
-
 ---
 
 ## Known limitations
