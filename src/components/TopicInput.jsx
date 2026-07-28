@@ -15,11 +15,11 @@ export default function TopicInput({ onGenerate, busy, onReset, showReset }) {
 
   // Cmd/Ctrl + Enter submits, which feels natural in a textarea.
   const onKeyDown = (e) => {
-    if ((e.metaKey || e.ctrlKey) && e.key === 'Enter' && !busy) {
-      e.preventDefault()
-      submit()
-    }
+  if ((e.metaKey || e.ctrlKey) && e.key === 'Enter') {
+    e.preventDefault()
+    submit()
   }
+}
 
   return (
     <section className="input">
@@ -40,9 +40,9 @@ export default function TopicInput({ onGenerate, busy, onReset, showReset }) {
         <button
           className="btn btn--primary"
           onClick={() => submit()}
-          disabled={busy || !text.trim()}
+          disabled={!text.trim()}
         >
-          {busy ? 'Generating…' : 'Generate study set'}
+          {busy ? 'Generating… (click to restart)' : 'Generate study set'}
         </button>
 
         {showReset && (
@@ -70,7 +70,7 @@ export default function TopicInput({ onGenerate, busy, onReset, showReset }) {
                 key={s.key}
                 className="btn btn--sim"
                 onClick={() => submit(s.key)}
-                disabled={busy}
+                //disabled={busy}
               >
                 {s.label}
               </button>
