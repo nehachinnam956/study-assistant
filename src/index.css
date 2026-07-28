@@ -346,6 +346,7 @@ body {
   background: none;
   cursor: pointer;
   perspective: 1200px;
+  color: inherit;   /* buttons don't inherit text color by default — force it */
 }
 .card__inner {
   position: relative;
